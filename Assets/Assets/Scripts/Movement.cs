@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
     
     public void SizeUp()
     {
-        transform.DOScale(transform.localScale + new Vector3(10,10,10),1f);
+        transform.DOScale(transform.localScale + new Vector3(20,20,20),1f);
         Instantiate(sizeUpText, sizeUpSpawner.position, sizeUpSpawner.rotation, gameObject.transform);
     }
     

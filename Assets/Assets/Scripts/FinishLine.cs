@@ -27,11 +27,11 @@ public class FinishLine : MonoBehaviour
 
     private IEnumerator CinematicCamera()
     {
+        GameManager.Instance.ResetToDefaultSize();
         GameManager.Instance.speedForward += 10f;
         GameManager.Instance.controllerActive = false;
         player.transform.DOMoveX(0, 1f);
         camera.transform.DOLocalMoveZ(0.08f, duration);
-        GameManager.Instance.ResetToDefaultSize();
         camera.transform.DOLocalRotate(new Vector3(-90, 180, 0),duration);
         yield return new WaitForSeconds(duration + 0.25f);
         camera.transform.DOLocalMoveZ(0.18f, duration);
